@@ -8,11 +8,11 @@ A lib for cutting an image by specific color line.
 
 Using npm:
 
-`npm install js-cut-image`
+`npm install @hsk.coder/js-cut-image`
 
 or using yarn:
 
-`yarn add js-cut-image`
+`yarn add @hsk.coder/js-cut-image`
 
 ---
 
