@@ -22,7 +22,7 @@ or using yarn:
 
 cutImageByColorLine(imgUrl, [255, 255, 255], 5, 70, CUT_DIRECTION_TOP, CUT_FIND_FIRST_LINE_OVER);
 
-It means that search from top to bottom and when find a line that includes white color( but It's okay from -5 to +5 from the criterion number) over 70% of a line, remove the line .
+It means that search from top to bottom and when find a line that includes white color( but It's okay from -5 to +5 from the criterion number) over 70% of a line, remove from first line to the line.
 
 ---
 
@@ -34,6 +34,18 @@ Let's say. <br />
 We have the image and want to remove black colors of the image.
 
 ```javascript
+import {
+  cutImageByColorLine,
+  CUT_DIRECTION_TOP,
+  CUT_DIRECTION_BOTTOM,
+  CUT_DIRECTION_LEFT,
+  CUT_DIRECTION_RIGHT,
+  CUT_FIND_FIRST_LINE_OVER,
+  CUT_FIND_LAST_LINE_UNDER,
+} from 'js-cut-image';
+
+...
+
 let cuttedImgUrl = await cutImageByColorLine(
   imgUrl,
   [0, 0, 0],
