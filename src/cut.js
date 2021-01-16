@@ -20,17 +20,17 @@ function findSpecificLine(
   height,
   color,
   deviation,
-  perCriterian,
+  perCriterion,
   cutDirection,
   cutType
 ) {
   const data = pixelData;
 
-  const checkCriterian = (cutType, per, perCriterian) =>
-    (cutType === CUT_FIND_FIRST_LINE_OVER && per > perCriterian) ||
-    (cutType === CUT_FIND_FIRST_LINE_UNDER && per < perCriterian) ||
-    (cutType === CUT_FIND_LAST_LINE_OVER && per > perCriterian) ||
-    (cutType === CUT_FIND_LAST_LINE_UNDER && per < perCriterian);
+  const checkCriterion = (cutType, per, perCriterion) =>
+    (cutType === CUT_FIND_FIRST_LINE_OVER && per > perCriterion) ||
+    (cutType === CUT_FIND_FIRST_LINE_UNDER && per < perCriterion) ||
+    (cutType === CUT_FIND_LAST_LINE_OVER && per > perCriterion) ||
+    (cutType === CUT_FIND_LAST_LINE_UNDER && per < perCriterion);
 
   const checkColor = (deviation, rDeviation, gDeviation, bDeviation) =>
     -deviation <= rDeviation &&
@@ -68,7 +68,7 @@ function findSpecificLine(
         }
 
         const per = (cnt / width) * 100;
-        if (checkCriterian(cutType, per, perCriterian)) {
+        if (checkCriterion(cutType, per, perCriterion)) {
           return [0, y, width, height - y];
         }
       }
@@ -91,7 +91,7 @@ function findSpecificLine(
         }
 
         const per = (cnt / width) * 100;
-        if (checkCriterian(cutType, per, perCriterian)) {
+        if (checkCriterion(cutType, per, perCriterion)) {
           return [0, 0, width, y];
         }
       }
@@ -114,7 +114,7 @@ function findSpecificLine(
         }
 
         const per = (cnt / height) * 100;
-        if (checkCriterian(cutType, per, perCriterian)) {
+        if (checkCriterion(cutType, per, perCriterion)) {
           return [x, 0, width - x, height];
         }
       }
@@ -137,7 +137,7 @@ function findSpecificLine(
         }
 
         const per = (cnt / height) * 100;
-        if (checkCriterian(cutType, per, perCriterian)) {
+        if (checkCriterion(cutType, per, perCriterion)) {
           return [0, 0, x, height];
         }
       }
@@ -152,7 +152,7 @@ function findSpecificLine(
  * @param {string} imgUrl target image url
  * @param {Array} color [R, G, B]
  * @param {number} deviation Deviation of color values.
- * @param {number} perCriterian How much it includes color or not. It depends on cut type
+ * @param {number} perCriterion How much it includes color or not. It depends on cut type
  * @param {number} cutDirection Cut Direction. You must use constants we provide. (CUT_DIRECTION_TOP, CUT_DIRECTION_BOTTOM, CUT_DIRECTION_LEFT, CUT_DIRECTION_RIGHT)
  * @param {number} cutType Whether to cut when a particular line is found or not. (CUT_FIND_FIRST_LINE_OVER, CUT_FIND_FIRST_LINE_UNDER, CUT_FIND_LAST_LINE_OVER, CUT_FIND_LAST_LINE_UNDER)
  */
@@ -160,7 +160,7 @@ export async function cutImageByColorLine(
   imgUrl,
   color,
   deviation,
-  perCriterian,
+  perCriterion,
   cutDirection,
   cutType
 ) {
@@ -183,7 +183,7 @@ export async function cutImageByColorLine(
         height,
         color,
         deviation,
-        perCriterian,
+        perCriterion,
         cutDirection,
         cutType
       );
