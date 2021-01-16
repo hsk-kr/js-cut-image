@@ -1,0 +1,25 @@
+{
+  "name": "@hsk.coder/js-cut-image",
+  "version": "0.0.1",
+  "description": "Image cutting library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsk-kr/js-cut-image.git"
+  },
+  "author": "hsk.coder@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hsk-kr/js-cut-image/issues"
+  },
+  "homepage": "https://github.com/hsk-kr/js-cut-image#readme",
+  "keywords": [
+    "cut",
+    "cut-image",
+    "js-image-cut",
+    "cut-image-by-specific-color-line"
+  ]
+}
