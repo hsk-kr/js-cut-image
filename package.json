@@ -1,5 +1,5 @@
 {
-  "name": "@hsk.coder/js-cut-image",
+  "name": "js-cut-image",
   "version": "0.0.1",
   "description": "Image cutting library",
   "main": "index.js",
