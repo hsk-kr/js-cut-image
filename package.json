@@ -1,6 +1,6 @@
 {
   "name": "js-cut-image",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Image cutting library",
   "main": "index.js",
   "scripts": {
