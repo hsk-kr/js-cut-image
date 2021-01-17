@@ -20,7 +20,18 @@ or using yarn:
 
 **cutImageByColorLine(image url, [r, g, b], deviation, percentage criterion, CUT_DIRECTION_TOP | CUT_DIRECTION_BOTTOM | CUT_DIRECTION_LEFT | CUT_DIRECTION_RIGHT, CUT_FIND_FIRST_LINE_OVER | CUT_FIND_FIRST_LINE_UNDER | CUT_FIND_LAST_LINE_OVER | CUT_FIND_LAST_LINE_UNDER)**
 
-cutImageByColorLine(imgUrl, [255, 255, 255], 5, 70, CUT_DIRECTION_TOP, CUT_FIND_FIRST_LINE_OVER);
+It returns cutted image url. If there is an error or it doesn't find the specific color line, It returns null.
+
+```javascript
+cutImageByColorLine(
+  imgUrl,
+  [255, 255, 255],
+  5,
+  70,
+  CUT_DIRECTION_TOP,
+  CUT_FIND_FIRST_LINE_OVER
+);
+```
 
 It means that search from top to bottom and when find a line that includes white color( but It's okay from -5 to +5 from the criterion number) over 70% of a line, remove from first line to the line.
 
