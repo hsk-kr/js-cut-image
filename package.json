@@ -1,6 +1,6 @@
 {
   "name": "js-cut-image",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Image cutting library",
   "main": "index.js",
   "scripts": {
@@ -18,8 +18,10 @@
   "homepage": "https://github.com/hsk-kr/js-cut-image#readme",
   "keywords": [
     "cut",
-    "cut-image",
+    "cut image",
+    "image cut",
     "js-image-cut",
+    "js-cut-image",
     "cut-image-by-specific-color-line"
   ]
 }
